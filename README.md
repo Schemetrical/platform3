@@ -12,8 +12,8 @@ Power supply and wall plug | $25 5V 10A | [Tinkersphere](https://tinkersphere.co
 Shipping | ~$15 for local parts | -
 
 ## Assembly
-1. *Tools: Keyboard, Mouse, and Monitor* Setup raspberry pi with latest OS and python 3.7+ (already pre-installed)
-2. *Tools: Soldering Iron (optional)* Assemble the components according to the [Adafruit](https://learn.adafruit.com/adafruit-rgb-matrix-bonnet-for-raspberry-pi/driving-matrices) guide. Soldering optional under step 6.
+1. **Tools: Keyboard, Mouse, and Monitor** Setup raspberry pi with latest OS and python 3.7+ (already pre-installed)
+2. **Tools: Soldering Iron (optional)** Assemble the components according to the [Adafruit](https://learn.adafruit.com/adafruit-rgb-matrix-bonnet-for-raspberry-pi/driving-matrices) guide. Soldering optional under step 6.
 3. Continue following the Adafruit software setup until complete.
 
 ## Setup
