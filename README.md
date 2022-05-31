@@ -1,6 +1,6 @@
 # Platform3
 A NYC subway countdown clock within the comforts of your own home.
-!(Gif of home made subway countdown clock with cool reflection over wooden table)[https://i.redd.it/qo0cp9vr6n291.gif]
+![Gif of home made subway countdown clock with cool reflection over wooden table](https://i.redd.it/qo0cp9vr6n291.gif)
 
 ## Parts
 Part | My cost | Link (and your cost)
