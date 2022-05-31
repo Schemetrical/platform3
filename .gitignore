@@ -1,0 +1,4 @@
+platform3/config.py
+.DS_Store
+rpi-rgb-led-matrix
+rgb-matrix.sh
