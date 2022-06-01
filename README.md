@@ -21,7 +21,7 @@ Shipping | ~$15 for local parts | -
 1. Clone/download repository. Enter that directory using `cd <the path of the repository you just cloned>`.
 2. Obtain API token by [signing up on MTA](https://api.mta.info/#/signup) and generating a token for GTFS-rt
 3. Run `make` to install dependencies and generate `config.py`
-4. Edit `config.py` to paste in the API token, and set up the `stops` array as follows: `Stop("<train>", "<stop>", <distance in minutes from station>)`. `<train>` is A, L, 7X, FS, etc. as listed in `platform3/constants.py`, `<stop>` is the stop ID _with direction_ obtained from [this list](https://github.com/Andrew-Dickinson/nyct-gtfs/blob/master/nyct_gtfs/gtfs_static/stops.txt), and `<distance in minutes from station>` is used to filter out trains that arrive too soon for you to be concerned.
+4. Edit `config.py` to paste in the API token, and set up the `stops` array as follows: `Stop("<train>", "<stop>", <distance in minutes from station>)`. `<train>` is A, L, 7X, FS, etc. as listed in [VALID_STOP_IDS](platform3/constants.py), `<stop>` is the stop ID _with direction_ obtained from [this list](https://github.com/Andrew-Dickinson/nyct-gtfs/blob/master/nyct_gtfs/gtfs_static/stops.txt), and `<distance in minutes from station>` is used to filter out trains that arrive too soon for you to be concerned.
 5. Run with the following commands: `chmod +x platform3/platform3.py` (enables execution), `sudo su` (elevates privilege to run low level hardware stuff), `platform3/platform3.py` (runs the program).
 
 ## Help
