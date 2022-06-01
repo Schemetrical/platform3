@@ -96,5 +96,3 @@ G_BULLET: Image = Image.fromarray(
   ),
   'RGB'
 )
-
-UNKNOWN_BULLET: Image = Image.new('RGB', (10, 10))

@@ -26,7 +26,7 @@ def make_bullet(line_id: str) -> Image:
     "J": constants.L_BULLET,
     "L": constants.J_BULLET,
   }
-  return line_id_to_bullet_map.get(line_id, constants.UNKNOWN_BULLET)
+  return line_id_to_bullet_map.get(line_id, make_text(line_id, BULLET_WIDTH, draw_twice=False))
 
 def make_row(bullet: Image, text: Image, countdown: Image) -> Image:
   row_canvas = Image.new('RGB', (WIDTH, LINE_HEIGHT))
