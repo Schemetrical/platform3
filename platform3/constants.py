@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 
-VALID_STOP_IDS = {
+VALID_LINE_IDS = {
   "1",
   "2",
   "3",

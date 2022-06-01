@@ -3,14 +3,14 @@ import datetime, time
 from typing import List
 
 from config import key, stops
-from constants import VALID_STOP_IDS
+from constants import VALID_LINE_IDS
 from models import Train
 from memcache import set_arrivals
 
 def main():
   # Validate config
   line_ids = set(map(lambda stop: stop.line_id, stops))
-  assert line_ids.issubset(VALID_STOP_IDS), "Stop IDs is invalid"
+  assert line_ids.issubset(VALID_LINE_IDS), "One or more Line IDs are invalid"
 
   # Load the realtime feed from the MTA site
   line_id_to_feed_specifier = {
