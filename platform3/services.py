@@ -3,15 +3,26 @@ import datetime, time
 from typing import List
 
 from config import key, stops
+from constants import VALID_STOP_IDS
 from models import Train
 from memcache import set_arrivals
 
 def main():
+  # Validate config
+  line_ids = set(map(lambda stop: stop.line_id, stops))
+  assert line_ids.issubset(VALID_STOP_IDS), "Stop IDs is invalid"
+
   # Load the realtime feed from the MTA site
+  line_id_to_feed_specifier = {
+    "5X": "5",
+    "6X": "6",
+    "7X": "7",
+    "FX": "F",
+  }
   feeds = list(
     map(
       lambda stop: NYCTFeed(
-        stop.line_id.value,
+        line_id_to_feed_specifier.get(stop.line_id, stop.line_id),
         api_key=key,
         fetch_immediately=False
       ),
@@ -25,7 +36,7 @@ def main():
     # Refresh live feeds
     for stop, feed in zip(stops, feeds):
       feed.refresh()
-      trains = feed.filter_trips(line_id=stop.line_id.value)
+      trains = feed.filter_trips(line_id=stop.line_id)
       train_arrivals: List[Train] = []
       for train in trains:
         for update in train.stop_time_updates:

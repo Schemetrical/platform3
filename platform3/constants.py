@@ -1,6 +1,39 @@
 from PIL import Image
 import numpy as np
 
+VALID_STOP_IDS = {
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "5X", # Rush hour peak direction express
+  "6",
+  "6X", # Weekday peak direction express
+  "7",
+  "7X", # Rush hour peak direction express
+  "GS", # 42nd street shuttle
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "FX", # Rush hour peak direction express
+  "FS", # Franklin avenue shuttle
+  "G",
+  "H", # Rockaway park shuttle
+  "J",
+  "Z",
+  "L",
+  "M",
+  "N",
+  "Q",
+  "W",
+  "R",
+  "SI", # Staten island railway
+}
+
 COL_BLK = (0, 0, 0)
 COL_WHT = (255, 255, 255)
 COL_GRY = (167, 169, 172) # L Train

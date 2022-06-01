@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 from dataclasses import dataclass
 from typing import List
 
-from models import LineID, Train
+from models import Train
 
 import constants
 
@@ -20,11 +20,11 @@ WIDTH = 64 # [Bullet][Flexible destination content][Countdown]
 DESTINATION_REPEAT_GAP = 10 # Destination ticker loop gap between end of text and start of text
 PAUSE_FRAMES = 50
 
-def make_bullet(line_id: LineID) -> Image:
+def make_bullet(line_id: str) -> Image:
   line_id_to_bullet_map = {
-    LineID.G: constants.G_BULLET,
-    LineID.L: constants.L_BULLET,
-    LineID.J: constants.J_BULLET,
+    "G": constants.G_BULLET,
+    "J": constants.L_BULLET,
+    "L": constants.J_BULLET,
   }
   return line_id_to_bullet_map.get(line_id, constants.UNKNOWN_BULLET)
 
