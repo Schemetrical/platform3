@@ -22,6 +22,16 @@ PAUSE_FRAMES = 50
 
 def make_bullet(line_id: str) -> Image:
   line_id_to_bullet_map = {
+    "1": constants.IRT_1_BULLET,
+    "2": constants.IRT_2_BULLET,
+    "3": constants.IRT_3_BULLET,
+    "4": constants.IRT_4_BULLET,
+    "5": constants.IRT_5_BULLET,
+    "6": constants.IRT_6_BULLET,
+    "7": constants.IRT_7_BULLET,
+    "5X": constants.EXP_5_BULLET,
+    "6X": constants.EXP_6_BULLET,
+    "7X": constants.EXP_7_BULLET,
     "G": constants.G_BULLET,
     "J": constants.L_BULLET,
     "L": constants.J_BULLET,
