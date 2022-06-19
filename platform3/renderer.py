@@ -33,8 +33,8 @@ def make_bullet(line_id: str) -> Image:
     "6X": constants.EXP_6_BULLET,
     "7X": constants.EXP_7_BULLET,
     "G": constants.G_BULLET,
-    "J": constants.L_BULLET,
-    "L": constants.J_BULLET,
+    "J": constants.J_BULLET,
+    "L": constants.L_BULLET,
   }
   return line_id_to_bullet_map.get(line_id, make_text(line_id, BULLET_WIDTH, draw_twice=False))
 
